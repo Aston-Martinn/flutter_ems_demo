@@ -59,6 +59,7 @@ class _LeaveApplicationCardState extends State<LeaveApplicationCard> {
                       initialDate: DateTime.now(),
                       firstDate: DateTime.now(),
                       lastDate: DateTime(2100),
+                      helpText: 'Select start date',
                     );
                     if (pickedStartDate != null) {
                       setState(() {
@@ -69,6 +70,7 @@ class _LeaveApplicationCardState extends State<LeaveApplicationCard> {
                         initialDate: pickedStartDate,
                         firstDate: pickedStartDate,
                         lastDate: DateTime(2100),
+                        helpText: 'Select end date',
                       );
                       if (pickedEndDate != null) {
                         setState(() {

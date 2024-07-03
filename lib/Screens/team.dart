@@ -11,7 +11,7 @@ class Team extends StatefulWidget {
 class _TeamState extends State<Team> {
   final List<TeamDetail> teamDetails = [
     TeamDetail(
-      name: "Member 1",
+      name: "You",
       position: "Team Lead",
       startedFrom: "2019 Jan",
       workingTill: "Current",

@@ -1,6 +1,7 @@
 import 'package:ems/Database/helper.dart';
 import 'package:ems/Screens/leave_applications.dart';
 import 'package:ems/Screens/leaves.dart';
+import 'package:ems/Screens/presence_screen.dart';
 import 'package:ems/Screens/profile.dart';
 import 'package:ems/Screens/registration_screen.dart';
 import 'package:ems/Screens/salary.dart';
@@ -358,55 +359,64 @@ class _DashboardState extends State<Dashboard> {
                         Row(
                           children: [
                             Expanded(
-                              child: Card(
-                                color: const Color(0xFFF7F7F7),
-                                elevation: 0,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(7.0),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(15),
-                                  child: Row(
-                                    children: <Widget>[
-                                      Container(
-                                        padding: const EdgeInsets.all(10),
-                                        decoration: const BoxDecoration(
-                                            color: Colors.green,
-                                            shape: BoxShape.circle),
-                                        child: const Icon(
-                                          Icons.calendar_month,
-                                          color: Colors.white,
-                                          size: 25,
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const Presence()),
+                                  );
+                                },
+                                child: Card(
+                                  color: const Color(0xFFF7F7F7),
+                                  elevation: 0,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7.0),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15),
+                                    child: Row(
+                                      children: <Widget>[
+                                        Container(
+                                          padding: const EdgeInsets.all(10),
+                                          decoration: const BoxDecoration(
+                                              color: Colors.green,
+                                              shape: BoxShape.circle),
+                                          child: const Icon(
+                                            Icons.calendar_month,
+                                            color: Colors.white,
+                                            size: 25,
+                                          ),
                                         ),
-                                      ),
-                                      const SizedBox(
-                                        width: 10,
-                                      ),
-                                      const Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          Text(
-                                            "Presence",
-                                            style: TextStyle(
-                                              color: Color(0xFFF555555),
-                                              fontFamily: 'Montserrat',
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.bold,
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        const Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              "Presence",
+                                              style: TextStyle(
+                                                color: Color(0xFFF555555),
+                                                fontFamily: 'Montserrat',
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
-                                          ),
-                                          Text(
-                                            "View",
-                                            style: TextStyle(
-                                              color: Color(0xFFF555555),
-                                              fontFamily: 'Montserrat',
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.normal,
+                                            Text(
+                                              "View",
+                                              style: TextStyle(
+                                                color: Color(0xFFF555555),
+                                                fontFamily: 'Montserrat',
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.normal,
+                                              ),
                                             ),
-                                          ),
-                                        ],
-                                      )
-                                    ],
+                                          ],
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
